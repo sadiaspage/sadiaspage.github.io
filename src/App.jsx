@@ -1,3 +1,8 @@
+import {Navbar} from '@/layout/Navbar';
+import {About} from '@/sections/About';
+import {Illustrations} from '@/sections/Illustrations';
+import {Projects} from '@/sections/Projects';
+
 function App() {
   const [count, setCount] = useState(0)
 
