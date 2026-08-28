@@ -5,18 +5,20 @@ const navLinks = [
 ];
 
 export const Navbar = () => {
-    return <header>
-        <nav>
-            <a>
-                LOGO
-            </a>
-            <div>
-                <div>
-                    {navLinks.map((link, index) => (
-                        <div><a href={link.href} key={index}>{link.label}</a></div>
-                    ))}
+    return (
+        <header className="fixed top-0 left-0 bg-transparent py-10">
+            <nav className="container mx-auto px-10 justify-between">
+                <a href='#' className='text-xl font-bold tracking-tight hover:text-primary'>
+                    LOGO
+                </a>
+                <div className='flex'>
+                    <div>
+                        {navLinks.map((link, index) => (
+                            <div key={index} className='py-10'><a href={link.href}>{link.label}</a></div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>;
+            </nav>
+        </header>
+    );
 };

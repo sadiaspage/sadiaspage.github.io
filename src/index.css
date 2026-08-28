@@ -3,6 +3,11 @@
 @theme {
   --color-background: #f0f2f5;
   --color-foreground: #01f1418;
+
+  --color-card: #f0f2f5;
+
+  --color-primary: #FF0000;
+  --color-primary-foreground: #01f1418;
 }
 
 @layer base {
