@@ -1,4 +1,6 @@
   import './Illustrations.css';
+  import { useState } from 'react';
+  import React from 'react';
 
   const objIllustrations = [
     {
@@ -35,10 +37,11 @@
 
 function Popup(props) {
     console.log('test:');
+    const [buttonPopup, setButtonPopup] = useState(false);
     return (props.trigger) ? (
         <div className='popup'>
             <div className='popup-inner'>
-                <button className='close-btn'>close</button>
+                <button className='close-btn' onClick={() => props.setTrigger(false)}>close</button>
                 { props.children }
             </div>
         </div>
@@ -47,9 +50,9 @@ function Popup(props) {
 
 export const Illustrations = () => {
     return (
-        <section>test
+        <section>Illustrations!
         </section>
     );
 };
 
-export default Illustrations;
+export default Popup;
