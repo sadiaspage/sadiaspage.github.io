@@ -8,6 +8,12 @@
 
   --color-primary: #FF0000;
   --color-primary-foreground: #01f1418;
+
+  --color-muted: #252e37;
+  --color-muted-foreground: #7a8491;
+
+  --color-surface: #e2d9d9;
+  --color-border: #FF0000;
 }
 
 @layer base {
@@ -23,5 +29,13 @@
 
   .font-serif {
     font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent)
   }
 }
