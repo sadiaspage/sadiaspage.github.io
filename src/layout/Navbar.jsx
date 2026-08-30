@@ -1,4 +1,4 @@
-import Popup from '@/sections/Illustrations';
+import Popup from '@/Utilities';
 import { Illustrations } from '@/sections/Illustrations';
 import { useState } from 'react';
 
@@ -19,14 +19,14 @@ export const Navbar = () => {
                 <div className='flex'>
                     <div className='px-2 py-1 gap-1'>
                         {navLinks.map((link) => (
-                            <div key={link.id} className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'><a href={link.href}>{link.label}</a></div>
+                            <div key={link.id} className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'>
+                                <button onClick={() => setButtonPopup(true)}><a href={link.href}>{link.label}</a></button>
+                                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                                </Popup>
+                            </div>
                         ))}
                     </div>
                 </div>
-                <button onClick={() => setButtonPopup(true)}>Illustrations</button>
-                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                    <Illustrations></Illustrations>
-                </Popup>
             </nav>
         </header>
     );
