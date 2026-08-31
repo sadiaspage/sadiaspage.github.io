@@ -1,5 +1,7 @@
 import Popup from '@/Utilities';
 import { Illustrations } from '@/sections/Illustrations';
+import { About } from '@/sections/About';
+import { Projects } from '@/sections/Projects';
 import { useState } from 'react';
 
 const navLinks = [
@@ -18,14 +20,24 @@ export const Navbar = () => {
                 </a>
                 <div className='flex'>
                     <div className='px-2 py-1 gap-1'>
-                        {navLinks.map((link) => (
-                            <div key={link.id} className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'>
-                                <button onClick={() => setButtonPopup(true)}><a>{link.label}</a></button>
-                                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                                    <Illustrations></Illustrations>
-                                </Popup>
-                            </div>
-                        ))}
+                        <div className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'>
+                            <button onClick={() => setButtonPopup(true)}>About</button>
+                            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                                <About></About>
+                            </Popup>
+                        </div>
+                        <div className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'>
+                            <button onClick={() => setButtonPopup(true)}>Illustrations</button>
+                            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                                <Illustrations></Illustrations>
+                            </Popup>
+                        </div>
+                        <div className='py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface'>
+                            <button onClick={() => setButtonPopup(true)}>Projects</button>
+                            <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                                <Projects></Projects>
+                            </Popup>
+                        </div>
                     </div>
                 </div>
             </nav>
