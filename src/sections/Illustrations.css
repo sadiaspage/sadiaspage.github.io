@@ -19,10 +19,3 @@
     top: 16px;
     right: 15%;
 }
-
-.img_illustration{
-    width: 400px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-}
