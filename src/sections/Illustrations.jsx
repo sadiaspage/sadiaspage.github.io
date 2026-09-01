@@ -38,9 +38,11 @@
 export const Illustrations = () => {
     return (
         <section>Illustrations!
+            <div class="grid grid-cols-5 gap-3">
             {objIllustrations.map(({ id, title, alt_text, src }) => (
-                <img key={id} class='img_illustration' src={src}></img>
+                <img key={id} src={src}></img>
             ))}
+            </div>
         </section>
     );
 };
