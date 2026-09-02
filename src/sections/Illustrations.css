@@ -12,10 +12,11 @@
     padding: 12px;
     width: 100%;
     background-color: #FFF;
+    overflow-y: auto;
 }
 
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
-    right: 15%;
+    right: 5%;
 }
