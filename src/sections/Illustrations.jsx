@@ -14,14 +14,14 @@
     id: 2,
     title: "Lion Dance Styles",
     alt_text: "Three lions are in a circle chasing each other, with lion dance instruments and elements surrounding them",
-    widthSize: "400px",
+    widthSize: "500px",
     src: "./src/assets/illustration_threeLionStyles.png"
   },
   {
     id: 3,
     title: "Dragonfruit",
     alt_text: "A story about two lions breaking into a wine shop, drinking all of the alcohol, and getting drunk. The Buddha, and the wine shop owner, confronts the lions.",
-    widthSize: "400px",
+    widthSize: "425px",
     src: "./src/assets/illustration_dragonfruit.png"
   },
   {
@@ -35,7 +35,7 @@
     id: 5,
     title: "See You Next Time!",
     alt_text: "A hamster and tiger, hand in hand, run through a reel of photos, reminiscing on their friendship together.",
-    widthSize: "400px",
+    widthSize: "350px",
     src: "./src/assets/illustration_seeYouNextTime.png"
   }
 ]
@@ -43,7 +43,7 @@
 export const Illustrations = () => {
     return (
         <section>Illustrations!
-            <div class="grid grid-cols-3 gap-3">
+            <div class="grid grid-cols-3 gap-5">
             {objIllustrations.map(({ id, title, alt_text, widthSize, src }) => (
                 <img key={id} src={src} alt_text ={alt_text} width={widthSize}></img>
             ))}
