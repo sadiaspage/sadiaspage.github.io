@@ -23,12 +23,12 @@ export const Navbar = () => {
         <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
           LOGO
         </a>
-        <div className="flex">
-          <div className="px-2 py-1 gap-1">
+        <div>
+          <div className="px-2 py-1 gap-1 grid grid-cols-1">
             {navLinks.map(({ id, key, label, Component }) => (
               <div key={id} className="py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface">
                 <button onClick={() => handlePopupToggle(key)}>{label}</button>
-                <Popup trigger={activePopup === key} setTrigger={(isOpen) => setActivePopup(isOpen ? key : null)}>
+                <Popup headerName = {label} trigger={activePopup === key} setTrigger={(isOpen) => setActivePopup(isOpen ? key : null)}>
                   <Component />
                 </Popup>
               </div>

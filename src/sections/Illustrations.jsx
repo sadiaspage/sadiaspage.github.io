@@ -42,7 +42,7 @@
 
 export const Illustrations = () => {
     return (
-        <section>Illustrations!
+        <section>
             <div class="grid grid-cols-3 gap-5">
             {objIllustrations.map(({ id, title, alt_text, widthSize, src }) => (
                 <img key={id} src={src} alt_text ={alt_text} width={widthSize}></img>

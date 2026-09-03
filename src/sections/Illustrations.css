@@ -1,7 +1,7 @@
 .popup {
     position: fixed;
-    top: 0;
-    left: 10%;
+    top: 10px;
+    left: 18%;
     width: 90%;
     height: 100vh;
     display: flex;
@@ -10,7 +10,8 @@
 .popup-inner {
     position: relative;
     padding: 12px;
-    width: 100%;
+    width: 90%;
+    height: 90%;
     background-color: #FFF;
     overflow-y: auto;
 }
