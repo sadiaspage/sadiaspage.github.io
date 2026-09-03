@@ -28,7 +28,7 @@ export const Navbar = () => {
             {navLinks.map(({ id, key, label, Component }) => (
               <div key={id} className="py-10 text-sm text-muted-foreground hover:text-foreground hover:bg-surface">
                 <button onClick={() => handlePopupToggle(key)}>{label}</button>
-                <Popup trigger={activePopup === key} setTrigger={(isOpen) => setActivePopup(isOpen ? key : null)}>
+                <Popup headerName = {label} trigger={activePopup === key} setTrigger={(isOpen) => setActivePopup(isOpen ? key : null)}>
                   <Component />
                 </Popup>
               </div>
