@@ -17,10 +17,14 @@ export const Navbar = () => {
     setActivePopup((current) => (current === key ? null : key));
   };
 
+  const handleOnClick = () => {
+    setActivePopup(null);
+  };
+
   return (
     <header className="fixed top-0 left-0 bg-transparent py-10">
       <nav className="container mx-auto px-10 justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight hover:text-primary">
+        <a href="#" onClick={handleOnClick} className="text-xl font-bold tracking-tight hover:text-primary">
           LOGO
         </a>
         <div>
