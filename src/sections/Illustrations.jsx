@@ -1,4 +1,5 @@
   import './Illustrations.css';
+  import Popup from '@/Utilities';
   import { useState } from 'react';
   import React from 'react';
 
@@ -41,13 +42,24 @@
 ]
 
 export const Illustrations = () => {
-    return (
-        <section>
-            <div class="grid grid-cols-3 gap-5">
-            {objIllustrations.map(({ id, title, alt_text, widthSize, src }) => (
-                <img key={id} src={src} alt_text ={alt_text} width={widthSize}></img>
-            ))}
-            </div>
-        </section>
-    );
+  const [activePopup, setActivePopup] = useState(null);
+
+  const handlePopupToggle = (id) => {
+    setActivePopup((current) => (current === id ? null : id));
+  };
+
+  return (
+    <section>
+      <div className="grid grid-cols-3 gap-5">
+        {objIllustrations.map(({ id, title, alt_text, widthSize, src }) => (
+          <div key={id}>
+            <img src={src} alt={alt_text} width={widthSize} onClick={() => handlePopupToggle(id)} className="cursor-pointer"/>
+            <Popup headerName={title} trigger={activePopup === id} setTrigger={(isOpen) => setActivePopup(isOpen ? id : null)}>
+              <img src={src} alt={alt_text} className="w-full h-auto" />
+            </Popup>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
