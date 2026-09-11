@@ -1,4 +1,5 @@
 import Popup from '@/Utilities';
+import './Navbar.css';
 import { Illustrations } from '@/sections/Illustrations';
 import { About } from '@/sections/About';
 import { Projects } from '@/sections/Projects';
@@ -23,6 +24,7 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 bg-transparent py-10">
+          <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'></link>
       <nav className="container mx-auto px-10 justify-between">
         <a href="#" onClick={handleOnClosePopup} className="text-xl font-bold tracking-tight hover:text-primary">
           LOGO
