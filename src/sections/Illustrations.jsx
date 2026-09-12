@@ -15,7 +15,7 @@
     id: 2,
     title: "Lion Dance Styles",
     alt_text: "Three lions are in a circle chasing each other, with lion dance instruments and elements surrounding them",
-    widthSize: "500px",
+    widthSize: "600px",
     src: "./src/assets/illustration_threeLionStyles.png"
   },
   {
