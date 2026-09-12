@@ -1,6 +1,14 @@
-@font-face {
-  font-family: 'Advent Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Advent Pro Regular'), local('AdventPro-Regular'), url('https://themes.googleusercontent.com/static/fonts/adventpro/v1/rT9jpj7pBpZV6AmssbZKkxsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
