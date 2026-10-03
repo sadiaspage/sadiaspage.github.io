@@ -9,7 +9,7 @@ function Popup(props) {
                 <div className='popup-header'>
                     {props.headerName}
                 </div>
-                <button className='close-btn' onClick={() => props.setTrigger(false)}>close</button>
+                <button className='close-btn' onClick={() => props.setTrigger(false)}><img src='./src/assets/closeButton.png' width='15px'></img></button>
                 { props.children }
             </div>
         </div>
